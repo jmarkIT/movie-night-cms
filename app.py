@@ -8,9 +8,9 @@ def hello():
 @app.route("/movies")
 def list_movies():
     with open("movies.txt", "r") as file:
-        movie_list = file.readlines()
+        movie_list = "".join(file.readlines())
 
-    return "".join(movie_list)
+    return movie_list
 
 if __name__ == "__main__":
     app.run()
